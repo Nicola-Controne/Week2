@@ -68,15 +68,17 @@ void dividi ()	//Inizio funzione dividi
 	printf ("\nInserisci il denominatore: ");
         scanf ("%g", &b);
 
-	if(b==0)	//Se il denominatore è uguale a 0 da errore e torna al main
+	if(b==0)	//Se il denominatore è uguale a 0 da errore e torna alla funzione divisione
 	{
 		printf("\nValore inserito non valido\n");
-		main ();
+		dividi ();
 	}
+	else
+	{
+       		float divisione = a / b;	//Divisione
 
-        float divisione = a / b;	//Divisione
-
-        printf ("\nLa divisione tra %g e %g e': %g\n", a,b,divisione);
+		printf ("\nLa divisione tra %g e %g e': %g\n", a,b,divisione);
+	}
 }
 
 void ins_string ()	//Inizio funzione stringa
